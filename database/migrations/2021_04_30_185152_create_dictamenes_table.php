@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateDictamenesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('dictamenes', function (Blueprint $table) {
+            $table->id();
+            $table->string('nro_dictamen');
+            $table->string('expediente');
+            $table->string('asunto');
+            $table->float('monto');
+            $table->date('fecha_ingreso');
+            $table->date('fecha_salida');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('dictamenes');
+    }
+}
