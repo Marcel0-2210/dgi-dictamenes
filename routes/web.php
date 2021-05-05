@@ -26,6 +26,7 @@ Route::post('dictamen/store', [DictamenController::class, 'store'])->name('dicta
 Route::get('dictamen/show/{id}', [DictamenController::class, 'show'])->name('dictamen.show');
 Route::get('dictamen/edit/{id}', [DictamenController::class, 'edit'])->name('dictamen.edit');
 Route::put('dictamen/update/{id}', [DictamenController::class, 'update'])->name('dictamen.update');
+Route::delete('dictamen/delete/{id}', [DictamenController::class, 'destroy'])->name('dictamen.destroy');
 
 //Ruta Middleware autenticacion Jetstream
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

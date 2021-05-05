@@ -70,10 +70,9 @@
                         </div> --}}
 
                         <div class="d-flex mt-4 justify-content-between align-items-center w-100">
-                            <input type="submit" class="btn btn-success" value="Editar">
+                            <input type="submit" class="btn btn-success" value="Editar" onclick="return confirm('Editar registro?')">
                             <a href="{{ route('dictamen.show', $dictamen->id) }}" class="btn btn-success fas fa-eye" title="Ver"></a>
                         </div>
-
                     </form>
                 </div>
             </div>

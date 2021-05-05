@@ -57,7 +57,14 @@
       </div>
     <div class="d-flex mt-3 justify-content-between align-items-center w-100">
         <a href="{{ route('dictamen.index', $dictamen->id) }}" style="color: white" class="btn btn-success far fa-arrow-alt-circle-left" title="Volver"> <b>Volver al inicio</b></a>
-        <a href="{{ route('dictamen.edit', $dictamen->id) }}" style="color: white" class="btn btn-info fas fa-edit" title="Editar"></a>
+        <div class="action-buttons">
+          <a href="{{ route('dictamen.edit', $dictamen->id) }}" style="color: white;" class="btn btn-info fas fa-edit" title="Editar"></a>
+          <form action="{{ route('dictamen.destroy', $dictamen->id) }}" method="POST" style="display: inline">
+            @method('delete')
+            @csrf
+            <button type="submit" class="btn btn-danger fas fa-trash-alt" title="Eliminar" onclick="return confirm('Eliminar registro?')"></a>
+          </form>
+        </div>
     </div>
     </div>
 </main>

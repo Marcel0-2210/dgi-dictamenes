@@ -81,8 +81,12 @@ class DictamenController extends Controller
     }
 
 
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $dictamen = Dictamenes::find($id);
+        $dictamen->delete();
+        
+        $request->session()->flash('delete', 'Se ha eliminado el registro');
+        return redirect(route('dictamen.index'));
     }
 }

@@ -28,7 +28,11 @@
         <td>
           <a href="{{ route('dictamen.show', $dictamen->id) }}" class="btn btn-success fas fa-eye" title="Ver"></a>
           <a href="{{ route('dictamen.edit', $dictamen->id) }}" class="btn btn-info fas fa-edit" title="Editar"></a>
-          <a href="#" class="btn btn-danger fas fa-trash-alt" title="Eliminar"></a>
+          <form action="{{ route('dictamen.destroy', $dictamen->id) }}" method="POST" style="display: inline">
+            @method('delete')
+            @csrf
+            <button type="submit" class="btn btn-danger fas fa-trash-alt" title="Eliminar" onclick="return confirm('Eliminar registro?')"></a>
+          </form>
         </td>
       </tr>
       @endforeach
@@ -54,6 +58,12 @@
   @if(Session::has('success'))
    <script>
      toastr.success("{!! Session::get('success') !!}");
+   </script>
+  @endif
+
+  @if(Session::has('delete'))
+   <script>
+     toastr.error("{!! Session::get('delete') !!}");
    </script>
   @endif
   
