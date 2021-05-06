@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dictamenes Legales')
+@section('title', 'Ver Dictamen ')
 
 @section('content_header')
     <div class="container">

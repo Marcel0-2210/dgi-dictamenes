@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Crear Dictamen')
+@section('title', 'Editar Dictamen')
 
 @section('content_header')
     <div class="container">
