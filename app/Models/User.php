@@ -61,6 +61,9 @@ class User extends Authenticatable
     ];
 
     public function adminlte_image() {
-        return '/storage/'.$this->profile_photo_path;
+        if(isset($this->profile_photo_path) && !empty($this->profile_photo_path))
+            return '/storage/'.$this->profile_photo_path;
+        else
+            return '/storage/profile-photos/user-default.png';
     }
 }
