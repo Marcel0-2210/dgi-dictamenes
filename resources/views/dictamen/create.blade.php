@@ -38,12 +38,12 @@
                         <div class="mb-3 row">
                             <div class="col-sm-6">
                                 <label for="asunto" class="col-form-label">Asunto</label>
-                                <input type="text" class="form-control" id="asunto" name="asunto">
+                                <input type="text" class="form-control" id="asunto" name="asunto" required>
                             </div>
 
                             <div class="col-sm-6">
                                 <label for="monto" class="col-form-label">Monto</label>
-                                <input type="number" class="form-control" id="monto" name="monto" step="0.01" min="0" required>
+                                <input type="number" class="form-control" id="monto" name="monto" step="0.01" min="0" max="99999999.99" required>
                             </div>
                         </div>
 

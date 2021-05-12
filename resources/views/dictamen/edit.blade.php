@@ -39,12 +39,12 @@
                         <div class="mb-3 row">
                             <div class="col-sm-6">
                                 <label for="asunto" class="col-form-label">Asunto</label>
-                                <input type="text" class="form-control" id="asunto" name="asunto" value="{{ $dictamen->asunto }}">
+                                <input type="text" class="form-control" id="asunto" name="asunto" value="{{ $dictamen->asunto }}" required>
                             </div>
 
                             <div class="col-sm-6">
                                 <label for="monto" class="col-form-label">Monto</label>
-                                <input type="number" class="form-control" id="monto" name="monto" step="0.01" min="0" value="{{ $dictamen->monto }}" required>
+                                <input type="number" class="form-control" id="monto" name="monto" step="0.01" min="0" max="9999999999.99" value="{{ $dictamen->monto }}" required>
                             </div>
                         </div>
 
