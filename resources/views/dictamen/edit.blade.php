@@ -44,7 +44,7 @@
 
                             <div class="col-sm-6">
                                 <label for="monto" class="col-form-label">Monto</label>
-                                <input type="number" class="form-control" id="monto" name="monto" step="0.01" min="0" max="9999999999.99" value="{{ $dictamen->monto }}" required>
+                                <input type="number" class="form-control" id="monto" name="monto" step="0.01" min="0" max="99999999.99" value="{{ $dictamen->monto }}" required>
                             </div>
                         </div>
 

@@ -13,6 +13,7 @@
       <tr>
         <th scope="col">Nro de dictamen</th>
         <th scope="col">Nro de expediente</th>
+        <th scope="col">Asunto</th>
         <th scope="col">Fecha de ingreso</th>
         <th scope="col">Fecha de salida</th>
         <th scope="col">Acciones</th>
@@ -23,6 +24,7 @@
       <tr>
         <td>{{ $dictamen->nro_dictamen }}</td>
         <td>{{ $dictamen->expediente }}</td>
+        <td>{{ $dictamen->asunto }}</td>
         <td>{{ date('d/m/Y', strtotime($dictamen->fecha_ingreso)) }}</td>
         <td>{{ date('d/m/Y', strtotime($dictamen->fecha_salida)) }}</td>
         <td>
